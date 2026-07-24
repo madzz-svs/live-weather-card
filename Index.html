@@ -2,17 +2,41 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Live Weather Card V1</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Dashboard V2</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <h1>Live Weather Card</h1>
-  <button id="fetchBtn">Get Weather</button>
-  
-  <div id="weatherResult">
-    <!-- Weather output appears here -->
+  <div class="weather-card">
+    <h2>Live Weather</h2>
+    
+    <div class="search-box">
+      <input type="text" id="cityInput" placeholder="Enter city name (e.g., London, Kochi)" />
+      <button id="searchBtn">Search</button>
+    </div>
+
+    <p id="statusMessage" class="status"></p>
+
+    <div id="weatherResult" class="weather-result hidden">
+      <div id="weatherIcon" class="weather-icon">☀️</div>
+      <h3 id="cityName">--</h3>
+      <div class="temp-display" id="tempDisplay">--°C</div>
+      
+      <div class="details-grid">
+        <div class="detail-item">
+          <span>Wind Speed</span>
+          <strong id="windSpeed">-- km/h</strong>
+        </div>
+        <div class="detail-item">
+          <span>Condition</span>
+          <strong id="conditionText">--</strong>
+        </div>
+      </div>
+    </div>
   </div>
 
   <script src="script.js"></script>
 </body>
 </html>
+
